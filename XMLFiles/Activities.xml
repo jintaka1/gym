@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE activity-upload [
+<!ELEMENT activity-upload (activities) >
+<!ATTLIST activity-upload operation (insert|update) "insert">
+<!ELEMENT activities (activity+) >
+<!ELEMENT activity (id?, activity_name, description, duration) >
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT activity_name (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT duration (#PCDATA)>
+]>
+<activity-upload operation="insert">
+<activities>
+  <activity>
+    <activity_name>Yoga</activity_name>
+    <description>Yoga class for all levels</description>
+    <duration>60 mins</duration>
+  </activity>
+  <activity>
+    <activity_name>Pilates</activity_name>
+    <description>Pilates class for beginners</description>
+    <duration>45 mins</duration>
+  </activity>
+</activities>
+</activity-upload>
+
+<!-- Update version -->
+<!-- <activity-upload operation="update">
+<activities>
+  <activity>
+    <id>1</id>
+    <activity_name>Advanced Yoga</activity_name>
+    <description>Yoga class for advanced students</description>
+    <duration>90 mins</duration>
+  </activity>
+</activities>
+</activity-upload> -->
